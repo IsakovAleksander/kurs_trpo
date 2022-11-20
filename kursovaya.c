@@ -47,6 +47,18 @@ int main(){
     };
     printf("Enter number of minutes, messages and Gb\n");
     scanf("%d %d %d", &tariff[0].minutes, &tariff[0].messages, &tariff[0].internet);
+    count = cheapest(tariff, 4);
+    switch(count){
+    case 1:
+        printf("The first tariff is the best\n");
+        break;
+    case 2:
+        printf("The second tariff is the best\n");
+        break;
+    case 3:
+        printf("The third tariff is the best\n");
+        break;
+    }
     return 0;
 }
 
