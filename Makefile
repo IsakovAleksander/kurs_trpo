@@ -1,2 +1,2 @@
 all:
-    gcc -Wall -o kursovaya kursovaya.c
+	gcc -Wall -o kursovaya kursovaya.c
