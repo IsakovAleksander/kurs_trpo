@@ -1,3 +1,5 @@
+#ifndef CORE_H
+#define CORE_H
 typedef struct Tariff{
     int minutes;
     int messages;
@@ -5,10 +7,12 @@ typedef struct Tariff{
     int cost;
 } Tariff;
 
-int extraMinutes = 5;
-int extraMessages = 5;
-int extraInternet = 50;
+const int extra_minutes = 5;
+const int extra_messages = 5;
+const int extra_internet = 50;
 
 int non_negative_diff(int a, int b);
 
 int cheapest(Tariff* tariff, int size);
+
+#endif //CORE_H

@@ -1,4 +1,8 @@
-    int non_negative_diff(int a, int b) {
+#include <stdio.h>
+#include <stdlib.h>
+#include "core.h"
+
+int non_negative_diff(int a, int b) {
 	int res = a - b;
 	if (res < 0) {
 		return 0;
@@ -6,13 +10,13 @@
 	return res;
 }
 
-int calc_cost(const Tariff* tariff, const Tariff* base) {
+int calc_cost(const Tariff tariff, const Tariff base) {
 	const int minutes_diff = non_negative_diff(tariff.minutes, base.minutes);
 	const int messages_diff = non_negative_diff(tariff.minutes, base.minutes);
 	const int internet_diff = non_negative_diff(tariff.minutes, base.minutes);
-	const minutes_cost = minutes_diff * extra_minutes;
-	const messages_cost = messages_diff * extra_messages;
-	const internet_cost = internet_diff * extra_internet;
+	const int minutes_cost = minutes_diff * extra_minutes;
+	const int messages_cost = messages_diff * extra_messages;
+	const int internet_cost = internet_diff * extra_internet;
 	int result_cost = tariff.cost + minutes_cost + messages_cost + internet_cost;
 	return result_cost;
 }
