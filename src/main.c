@@ -3,7 +3,7 @@
 #include "core.h"
 #include "core.c"
 
-int main(){
+int main() {
     int count;
     Tariff tariff[4] = {
         {},
@@ -14,7 +14,7 @@ int main(){
     printf("Enter number of minutes, messages and Gb\n");
     scanf("%d %d %d", &tariff[0].minutes, &tariff[0].messages, &tariff[0].internet);
     count = cheapest(tariff, 4);
-    switch(count){
+    switch(count) {
     case 1:
         printf("The first tariff is the best\n");
         break;

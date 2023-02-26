@@ -21,13 +21,13 @@ int calc_cost(const Tariff tariff, const Tariff base) {
 	return result_cost;
 }
 
-int cheapest(Tariff* tariff, int size){
+int cheapest(Tariff* tariff, int size) {
     int count = 1;
     int mincost = tariff[1].cost + tariff[2].cost + tariff[3].cost;
     Tariff buff;
-    for(int i = 1; i < size; i++){
+    for(int i = 1; i < size; i++) {
         buff.cost = calc_cost(tariff[i], buff);
-        if(mincost > buff.cost){
+        if(mincost > buff.cost) {
             mincost = buff.cost;
             count = i;
         }

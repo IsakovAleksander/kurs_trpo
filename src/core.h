@@ -1,6 +1,7 @@
 #ifndef CORE_H
 #define CORE_H
-typedef struct Tariff{
+
+typedef struct Tariff {
     int minutes;
     int messages;
     int internet;
