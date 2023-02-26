@@ -1,2 +1,2 @@
-all:
-	gcc -Wall -o kursovaya src/kursovaya.c
+main.c:
+	cc src/main.c src/core.c src/core.h - Wall -o main
