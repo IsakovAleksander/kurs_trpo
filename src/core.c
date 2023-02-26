@@ -1,6 +1,11 @@
+#include "core.h"
+
 #include <stdio.h>
 #include <stdlib.h>
-#include "core.h"
+
+const int extra_minutes = 5;
+const int extra_messages = 5;
+const int extra_internet = 50;
 
 int non_negative_diff(int a, int b) {
 	int res = a - b;

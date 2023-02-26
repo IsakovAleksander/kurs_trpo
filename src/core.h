@@ -8,11 +8,9 @@ typedef struct Tariff {
     int cost;
 } Tariff;
 
-const int extra_minutes = 5;
-const int extra_messages = 5;
-const int extra_internet = 50;
-
 int non_negative_diff(int a, int b);
+
+int calc_cost(const Tariff tariff, const Tariff base);
 
 int cheapest(Tariff* tariff, int size);
 

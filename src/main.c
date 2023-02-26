@@ -1,7 +1,6 @@
-#include <stdio.h>
-#include <stdlib.h>
 #include "core.h"
-#include "core.c"
+
+#include <stdio.h>
 
 int main() {
     int count;
