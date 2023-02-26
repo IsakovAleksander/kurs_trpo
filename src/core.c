@@ -24,7 +24,7 @@ int calc_cost(const Tariff tariff, const Tariff base, Packet extra_packet) {
 
 int cheapest(Tariff* tariff, int size, Packet extra_packet) {
     int count = 1;
-    int mincost = tariff[1].cost + tariff[2].cost + tariff[3].cost;
+    int mincost = (tariff[1].cost + tariff[2].cost + tariff[3].cost) * 10;
     for(int i = 1; i < size; i++) {
         tariff[0].cost = calc_cost(tariff[i], tariff[0], extra_packet);
         if(mincost > tariff[0].cost) {
