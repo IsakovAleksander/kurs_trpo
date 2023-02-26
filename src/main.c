@@ -5,17 +5,25 @@
 int main() {
     int count;
     Packet extra_packet;
-    Tariff tariff[4] = {
-        {},
-        {300, 300, 15, 300},
-        {450, 450, 10, 450},
-        {600, 600, 30, 750},
-    };
+    Tariff tariff[4] = {};
 
     FILE* extra_packet_file;
     extra_packet_file = fopen("extra_packet_data.txt","r");
-    fscanf("%d%d%d", &extra_packet.minutes, &extra_packet.messages, &extra_packet.internet);
+    fscanf(extra_packet_file, "%d%d%d", &extra_packet.minutes, &extra_packet.messages, &extra_packet.internet);
     fclose(extra_packet_file);
+
+    FILE* tariff_data_file;
+    tariff_data_file = fopen("tariff1_data.txt","r");
+    fscanf(tariff_data_file, "%d%d%d%d", &tariff[1].packet.minutes, &tariff[1].packet.messages, &tariff[1].packet.internet, &tariff[1].cost);
+    fclose(tariff_data_file);
+
+    tariff_data_file = fopen("tariff2_data.txt","r");
+    fscanf(tariff_data_file, "%d%d%d%d", &tariff[2].packet.minutes, &tariff[2].packet.messages, &tariff[2].packet.internet, &tariff[2].cost);
+    fclose(tariff_data_file);
+
+    tariff_data_file = fopen("tariff3_data.txt","r");
+    fscanf(tariff_data_file, "%d%d%d%d", &tariff[3].packet.minutes, &tariff[3].packet.messages, &tariff[3].packet.internet, &tariff[3].cost);
+    fclose(tariff_data_file);
 
     printf("Enter number of minutes, messages and Gb\n");
     scanf("%d %d %d", &tariff[0].packet.minutes, &tariff[0].packet.messages, &tariff[0].packet.internet);
