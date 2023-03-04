@@ -2,7 +2,7 @@
 
 #include "../src/core.h"
 
-#include "ctest/ctest.h"
+#include "ctest.h"
 
 CTEST(arithmetic_suite, non_negative_diff) {
     // Given
