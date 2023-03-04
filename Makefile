@@ -4,5 +4,11 @@ obj/main.o: src/main.c
 obj/core.o: src/core.c src/core.h
 	$(CC) -c src/core.c -o obj/core.o
 
+obj/tests/tests.o: tests/test.c
+	$(CC) -c test.c -o obj/tests/tests.o
+
+obj/tests/tests_core.o: src/core.c
+	$(CC) -c src/core.c -o obj/tests/tests_core.o
+
 main: obj/main.o obj/core.o
 	$(CC) obj/main.o obj/core.o -o bin/main
