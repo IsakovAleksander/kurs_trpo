@@ -10,5 +10,8 @@ obj/tests/tests.o: tests/test.c
 obj/tests/tests_core.o: src/core.c
 	$(CC) -c src/core.c -o obj/tests/tests_core.o
 
+tests: obj/tests/tests.o obj/tests/tests_core_.o
+	$(CC) obj/tests/tests.o obj/tests/tests_core.o -o tests_bin/tests
+
 main: obj/main.o obj/core.o
 	$(CC) obj/main.o obj/core.o -o bin/main
