@@ -28,7 +28,7 @@ int main() {
 
     printf("Enter number of minutes, messages and Gb\n");
     scanf("%d %d %d", &tariff[0].packet.minutes, &tariff[0].packet.messages, &tariff[0].packet.internet);
-    if((tariff[0].packet.minutes == 0 && tariff[0].packet.messages == 0 && tariff[0].packet.internet == 0)||(tariff[0].packet.minutes > 0 || tariff[0].packet.messages >= 0 || tariff[0].packet.internet >= 0)){
+    if((tariff[0].packet.minutes == 0 && tariff[0].packet.messages == 0 && tariff[0].packet.internet == 0)||(tariff[0].packet.minutes <= 0 || tariff[0].packet.messages <= 0 || tariff[0].packet.internet <= 0)){
         printf("The entered data isn't correct, please restart the program\n");
         return 1;
     }
